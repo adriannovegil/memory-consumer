@@ -5,26 +5,13 @@ import java.text.NumberFormat;
 
 public class SystemInfo {
 
-    private Runtime runtime = Runtime.getRuntime();
+    private final Runtime runtime = Runtime.getRuntime();
 
     public String info() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.osInfo());
         sb.append(this.memInfo());
         sb.append(this.diskInfo());
         return sb.toString();
-    }
-
-    public String osName() {
-        return System.getProperty("os.name");
-    }
-
-    public String osVersion() {
-        return System.getProperty("os.version");
-    }
-
-    public String osArch() {
-        return System.getProperty("os.arch");
     }
 
     public long totalMem() {
@@ -55,23 +42,6 @@ public class SystemInfo {
         sb.append("<br/>");
         return sb.toString();
 
-    }
-
-    public String osInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("OS: ");
-        sb.append(this.osName());
-        sb.append("<br/>");
-        sb.append("Version: ");
-        sb.append(this.osVersion());
-        sb.append("<br/>");
-        sb.append(": ");
-        sb.append(this.osArch());
-        sb.append("<br/>");
-        sb.append("Available processors (cores): ");
-        sb.append(runtime.availableProcessors());
-        sb.append("<br/>");
-        return sb.toString();
     }
 
     public String diskInfo() {

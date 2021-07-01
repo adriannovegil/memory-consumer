@@ -1,2 +1,4 @@
 com/devcircus/memory/dummy/Main.class
+com/devcircus/memory/dummy/system/MemInfo.class
 com/devcircus/memory/dummy/SystemInfo.class
+com/devcircus/memory/dummy/system/OSInfo.class

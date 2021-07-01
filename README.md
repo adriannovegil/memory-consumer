@@ -15,7 +15,7 @@ eval $(minikube docker-env)
 We need to build the docker image after we set the environment variables above and make sure to tag the image as same as in the deployment yaml file.
 
 ```
-docker build -t memory_consumer .
+    docker build -t memory_consumer .
 ```
 
 We have to set ImagePullPolicy to Never in order to use local docker images with the deployment.
